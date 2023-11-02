@@ -331,8 +331,8 @@
   .aboutme{
     
     color: var(--font-main-color);
-    width: 1000px;
-    
+    width: 100%;
+    max-width: 70%;
     position: absolute;
     top: 45%;
     left: 31%;
@@ -475,8 +475,7 @@
 
     .aboutme{
       max-width: 100%;
-      left: 0%;
-      margin-left: 50px;
+      left: 17%;
       top: 35%;
     }
 
@@ -598,7 +597,7 @@
     }
 
     .aboutme{
-      max-width: 100%;
+      max-width: 65%;
       left: 25%;
     }
     
