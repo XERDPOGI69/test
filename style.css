@@ -123,6 +123,8 @@
     animation: gradient 30s ease infinite;
     overflow: auto;
     overflow-x: hidden;
+    
+  
   }
   
   body.darkmode{
@@ -330,6 +332,7 @@
     
     color: var(--font-main-color);
     width: 1000px;
+    
     position: absolute;
     top: 45%;
     left: 31%;
@@ -450,6 +453,10 @@
       font-size: 7px;
     }
 
+    body{
+      width: 100%;
+    }
+
    
     .image-box img {
       max-width: 55%;
@@ -483,6 +490,10 @@
 
     html{
       font-size: 10px;
+    }
+
+    body{
+      width: 100%;
     }
    
     .image-box img {
