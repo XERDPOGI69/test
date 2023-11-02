@@ -123,7 +123,6 @@
     animation: gradient 30s ease infinite;
     overflow: auto;
     overflow-x: hidden;
-  
   }
   
   body.darkmode{
@@ -310,8 +309,59 @@
     border: none;
     color: var(--font-secondary-color);
   }
+
+  /* About me Content */
+  .about-heading{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    top: 60px;
+    color: var(--font-main-color);
+    overflow: hidden;
+    white-space: nowrap;
+    
+  }
+  
+  .about-heading h1{
+    font-size: 6em; 
+    font-family: "CustomFont", sans-serif;
+  }
+  .aboutme{
+    
+    color: var(--font-main-color);
+    width: 1000px;
+    position: absolute;
+    top: 45%;
+    left: 31%;
+    white-space: normal;
+    text-align: justify;
+  }
+  
+  .aboutme li{
+  list-style-type: circle;  
+  font-size: 2rem;
+  font-weight: bold;
+  
+  }
+  
+  
+  .aboutme p{
+    margin-bottom: 100px;
+    margin-top: 20px;
+    margin-right: 20%;
+    font-size: 1.5rem;
+    white-space: normal;
+    width: 70%;
+    letter-spacing: normal;
+    }
+    .resume-link {
+      text-decoration: none; 
+      color: inherit; 
+      position: relative;
+      
+    }
 /* MEDIA FOR HAMBURGER MENU */
-  @media (max-width: 1200px) and (min-width: 320px){
+  @media (max-width: 1330px) and (min-width: 320px){
 
     .home {
         padding-top: 60px;
@@ -416,6 +466,16 @@
       bottom: 15%;
     }
 
+    .aboutme{
+      max-width: 100%;
+      left: 15%;
+      top: 35%;
+    }
+
+    .aboutme p{
+      margin-bottom: 50px;
+    }
+
 
   }
   /* TABLET SIZE */
@@ -439,6 +499,15 @@
       position: relative;
       
       bottom: 14%;
+    }
+    .aboutme{
+      max-width: 100%;
+      left: 15%;
+      top: 30%;
+    }
+
+    .aboutme p{
+      margin-bottom: 50px;
     }
 
   }
@@ -465,6 +534,12 @@
       bottom: 10%;
     }
 
+    .aboutme{
+      max-width: 100%;
+      left: 15%;
+      top: 30%;
+    }
+
   }
   /* NORMAL SIZE */
   @media (max-width:1200px ) and (min-width:1025px ){
@@ -485,6 +560,11 @@
     .content{
       max-width: 100%;
     }
+    .aboutme{
+      max-width: 100%;
+      left: 15%;
+      top: 35%;
+    }
   }
   /* MOHNITOR SIZE */
   @media (max-width:1500px ) and (min-width:1201px ){
@@ -492,8 +572,6 @@
     html{
       font-size: 16px;
     }
-
-    
    
     button{
       max-width: 40%;
@@ -505,6 +583,11 @@
     
     .home{
       grid-gap: 100px;
+    }
+
+    .aboutme{
+      max-width: 100%;
+      left: 25%;
     }
     
   }
