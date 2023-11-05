@@ -1,8 +1,6 @@
 const body = document.querySelector('body');
 const btn = document.querySelector('.btn');
 const icon = document.querySelector('.btn__icon');
-const lightLogo = document.getElementById('logo-light');
-const darkLogo = document.getElementById('logo-dark');
 
 function store(value) {
   localStorage.setItem('darkmode', value);
@@ -17,10 +15,8 @@ function load() {
   } else if (darkmode === 'true') {
     body.classList.add('darkmode');
     icon.classList.add('fa-moon');
-    setLogo('dark'); 
   } else if (darkmode === 'false') {
     icon.classList.add('fa-sun');
-    setLogo('light'); 
   }
 }
 
@@ -34,27 +30,15 @@ btn.addEventListener('click', () => {
   if (body.classList.contains('darkmode')) {
     icon.classList.remove('fa-sun');
     icon.classList.add('fa-moon');
-    setLogo('dark');
   } else {
     icon.classList.remove('fa-moon');
     icon.classList.add('fa-sun');
-    setLogo('light'); 
   }
 
   setTimeout(() => {
     icon.classList.remove('animated');
   }, 500);
 });
-
-function setLogo(mode) {
-  if (mode === 'dark') {
-    lightLogo.style.display = 'none';
-    darkLogo.style.display = 'flex';
-  } else {
-    lightLogo.style.display = 'flex';
-    darkLogo.style.display = 'none';
-  }
-}
 
 const menu = document.querySelector('.menu');
 const openMenuButton = document.querySelector('.open-menu');

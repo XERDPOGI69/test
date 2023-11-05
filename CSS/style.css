@@ -129,7 +129,6 @@
     background: var(--dark-color);
     background-size: 800% 800%;
     background-attachment: fixed;
-    animation: gradient 30s ease infinite;
     overflow: auto;
     overflow-x: hidden;
   }
@@ -151,10 +150,10 @@
   }
 
 
-  .idk{
+  .position{
     width: 10%;
     position: relative;
-    left: 5%; 
+    left: 10%; 
   }
 
   .nav-bar li a {
@@ -164,10 +163,37 @@
 
 
 
-  .logo{
-    width: 100%;
-    max-width: 100%;
-  }
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20%;
+ 
+    
+}
+
+.line {
+    width: 7px;
+    height: 70px;
+    background-color: var(--font-main-color); 
+    transform: rotate(45deg);
+    position: absolute;
+    border-radius: 30%;
+}
+
+.line:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.line:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+.line:nth-child(4) {
+    transform: rotate(-90deg);
+}
+.line:nth-child(5) {
+    transform: rotate(0deg);
+}
   
   
 
@@ -249,11 +275,33 @@
     border: 3px solid rgba(0, 0, 0, 0.322);
     box-shadow: 10px 5px 10px rgba(0, 0, 0, .6);
     position: relative;
-    left: 7%;
+    
+  }
+  
+  .image-icon{
+    width: 70%;
+    max-width: 100%;
+    position: relative;
+    bottom: 10%;
+    left: 20%;
+  }
+
+  .icon{
+    text-align: center;
+    width: 100%;
+    transform:translateY(50%);
+    
+  }
+
+  .icon a{
+    color: var(--font-main-color);
+    margin: 0px 15px 0px 15px;
   }
   
   .content {
    max-width: 100%;
+   position: relative;
+   bottom: 10%;
    height: auto;
    font-size: 16px;
    font-family: 'CustomFont', sans-serif;
@@ -300,6 +348,10 @@
     font-family: "CustomFont", sans-serif;
     font-size: 1.3rem;
     animation:scale-up-hor-center .4s cubic-bezier(.39,.575,.565,1.000) both
+  }
+
+  #button{
+    text-decoration: none;
   }
   
   span {
@@ -443,14 +495,16 @@
   
   .overlay h3 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-family: "CustomFont", sans-serif;
   }
   
   .overlay p {
     margin: 5px 0;
     position: relative;
-    top: 40px;
-    font-size: 1.5rem;
+    font-family: "CustomFont", sans-serif;
+    font-size: 1.3rem;
+    padding: 10px;
   }
   
   .project-heading {
@@ -469,7 +523,7 @@
     animation: myAnim 1s ease 0s 1 normal forwards; 
   }
 /* MEDIA FOR HAMBURGER MENU */
-  @media (max-width: 1330px) and (min-width: 320px){
+  @media (max-width: 1330px) {
 
     .home {
         padding-top: 60px;
@@ -548,14 +602,17 @@
       #check:checked ~ .menu-overlay {
         display: block;
       }
+      
+      
   
   }
 
-  /* MOBILE SIZE */
-  @media (max-width:480px ) and (min-width:320px ){
+
+  /* BIG MOBILE SIZE */
+  @media (max-width:480px) {
 
     html{
-      font-size: 7px;
+      font-size: 9px;
     }
 
     .idk{
@@ -567,27 +624,43 @@
     .logo{
       width: 100%;
       max-width: 80%;
+      position: relative;
+      left: 40%;
     }
-z
+
 
     body{
       width: 100%;
     }
 
    
+    .icon{
+      transform: translateY(1100%);
+      width: 120%;
+    
+      
+    }
+   
     .image-box img {
-      max-width: 55%;
-      left: 22.5%;
+      max-width: 60%;
+      left: 28%;
+      
     }
 
     button{
-      max-width: 40%;
+      max-width: 39%;
+    }
+
+    .image-icon{
+      left: 8%;
+      height: 77%;
+      bottom: 30%;
     }
 
     .content{
       max-width: 100%;
       position: relative;
-      bottom: 15%;
+      bottom: 35%;
     }
 
     .aboutme{
@@ -643,15 +716,10 @@ z
   @media (max-width:768px ) and (min-width:481px ){
 
     html{
-      font-size: 10px;
+      font-size: 12px;
     }
 
-    .idk{
-      width: 25%;
-      position: relative;
-      left: 7%; 
-    }
-  
+   
     .logo{
       width: 85%;
       max-width: 100%;
@@ -660,14 +728,28 @@ z
     body{
       width: 100%;
     }
+    
+
+    .icon{
+      transform: translateY(1000%);
+      width: 100%;
+    }
    
     .image-box img {
-      max-width: 50%;
-      left: 24%;
+      max-width: 60%;
+      left: 20%;
+      
     }
 
     button{
-      max-width: 30%;
+      max-width: 40%;
+      font-size: 1rem;
+    }
+
+    .image-icon{
+      left: 15%;
+      height: 77%;
+      top: 10%;
     }
 
     .content{
@@ -734,9 +816,15 @@ z
       max-width: 100%;
     }
    
+    .image-icon{
+      width: 70%;
+      position: relative;
+      left: 15%;
+    }
+
     .image-box img {
-      max-width: 50%;
-      left: 24%;
+      max-width: 60%;
+      left: 20%;
     }
 
     button{
@@ -774,9 +862,15 @@ z
       max-width: 95%;
     }
 
+    .image-icon{
+      width: 70%;
+      position: relative;
+      left: 15%;
+    }
+
     .image-box img {
-      max-width: 50%;
-      left: 24%;
+      max-width: 60%;
+      left: 20%;
     }
 
     button{
@@ -793,7 +887,7 @@ z
     }
   }
   /* MOHNITOR SIZE */
-  @media (max-width:1300px ) and (min-width:1201px ){
+  @media (max-width:1330px ) and (min-width:1201px ){
      
     html{
       font-size: 16px;
@@ -808,6 +902,12 @@ z
       width: 100%;
       max-width: 100%;
     }
+    
+    .image-icon{
+      width: 70%;
+      position: relative;
+      left: 15%;
+    }
    
     button{
       max-width: 40%;
@@ -820,7 +920,7 @@ z
     
     .content{
       position: relative;
-      bottom: 30%;
+      bottom: 45%;
     }
     
     .home{

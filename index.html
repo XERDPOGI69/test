@@ -6,17 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Portfolio</title>
     
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/CSS/animation.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <nav>
             <ul class='nav-bar'>
-              <a class="idk" href="index.html">
-                <img class="logo" id="logo-light" src="img\lightlogo.png" alt="Light Logo">
-                <img class="logo" id="logo-dark" src="img\darklogo.png" alt="Dark Logo" style="display: hidden;"></a>
+              <a class="position" href="index.html">
+                <div class="logo">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                </div></a>
                 
                 <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
                 <ul class="menu"> 
@@ -33,10 +39,17 @@
         
     </header>
     
-    <section class="home" id="home">
+    <div class="home">
+      <div class="image-icon">
       <div class="image-box">
         <img src="img\pic.png" class="pic">
     </div>
+    <div class="icon">
+      <a href="https://www.facebook.com/joshua.portacion.1"><i class="fa-brands fa-facebook fa-3x"></i></a>
+      <a href="https://github.com/XERDPOGI69"><i class="fa-brands fa-github fa-3x"></i></a>
+      <a href=""><i class="fa-brands fa-instagram fa-3x"></i></a>
+    </div>
+      </div>
     <div class="content">
         <h2>Hello, I'm</h2>
         <h1>Joshua Portacion</h1>
@@ -48,14 +61,15 @@
           of my projects
         </p>
         <div>
-          <a href="ABOUT.html"> <button type="button"><span></span>About me</button> </a>
-          <a href="PROJECT.html"> <button type="button"><span></span>Projects</button></a>
+          <a id="button" href="ABOUT.html"> <button type="button"><span></span>About me</button> </a>
+          <a id="button" href="PROJECT.html"> <button type="button"><span></span>Projects</button></a>
         </div>
         
     </div>
     
   </div>
-  
+
+  <script src="https://kit.fontawesome.com/564967ff08.js" crossorigin="anonymous"></script>
   <script src="WEB.js"></script>
 </body>
 </html>
