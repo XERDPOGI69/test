@@ -43,12 +43,14 @@ btn.addEventListener('click', () => {
 const menu = document.querySelector('.menu');
 const openMenuButton = document.querySelector('.open-menu');
 const closeMenuButton = document.querySelector('.close-menu');
+const styles = document.querySelector('.styles');
 
 
 openMenuButton.addEventListener('click', () => {
   menu.classList.add('opened');
   openMenuButton.style.display = 'none'; 
   closeMenuButton.style.display = 'flex'; 
+  styles.style.display = 'flex'; 
 });
 
 
@@ -56,6 +58,8 @@ closeMenuButton.addEventListener('click', () => {
   menu.classList.remove('opened');
   closeMenuButton.style.display = 'none'; 
   openMenuButton.style.display = 'flex'; 
+  styles.style.display = 'none'; 
 });
+
 
 

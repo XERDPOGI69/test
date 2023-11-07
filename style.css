@@ -5,9 +5,10 @@
   }
    @font-face {
     font-family: 'CustomFont';
-    src: url('Exo2-VariableFont_wght.ttf') format('truetype'),
-         
-    /* Add more source URLs for different font formats if needed */
+    src: url('Exo2-VariableFont_wght.ttf') format('truetype'),;
+
+    font-family: 'Logo';
+    src: url('Codec-Cold-Heavy-trial.ttf') format('truetype'),
   }
  
  /* COLOR OF WEBSITE */
@@ -153,7 +154,8 @@
   .position{
     width: 10%;
     position: relative;
-    left: 10%; 
+    left: 8%; 
+    text-decoration: none;
   }
 
   .nav-bar li a {
@@ -167,7 +169,7 @@
     width: 100px;
     height: 100px;
     margin-bottom: 20%;
- 
+    
     
 }
 
@@ -178,6 +180,7 @@
     transform: rotate(45deg);
     position: absolute;
     border-radius: 30%;
+    
 }
 
 .line:nth-child(2) {
@@ -194,12 +197,30 @@
 .line:nth-child(5) {
     transform: rotate(0deg);
 }
+
+.logo-h1{
+  font-family: 'Logo', sans-serif;
+  font-size: 4rem;
+  color: transparent;
+  letter-spacing: -2px;
+  -webkit-text-stroke: 2px var(--font-main-color);
+  position: relative;
+  padding: 10px 0px 0px 20px;
+  left: 50%;
+}
+
+span{
+  color: var(--font-main-color);
+  -webkit-text-stroke: transparent;
+}
+
   
   
 
   .menu {
     display: flex;
     align-items: center;
+    
   }
   
   .menu li {
@@ -261,14 +282,14 @@
     align-items:center;
     position: relative;
     width: 70%;  
-    left: 15%;
-    padding-top: 100px;
+    left: 12%;
+    top: 100px;
 
     
   }
    
   .pic{
-    width: 500px;
+    width: 30rem;
     max-width: 100%;
     height: auto;
     border-radius: 50%;
@@ -282,7 +303,6 @@
     width: 70%;
     max-width: 100%;
     position: relative;
-    bottom: 10%;
     left: 20%;
   }
 
@@ -301,7 +321,6 @@
   .content {
    max-width: 100%;
    position: relative;
-   bottom: 10%;
    height: auto;
    font-size: 16px;
    font-family: 'CustomFont', sans-serif;
@@ -354,7 +373,7 @@
     text-decoration: none;
   }
   
-  span {
+  .spans{
     background: var(--font-main-color);
     height: 100%;
     width: 0;
@@ -384,6 +403,7 @@
     overflow: hidden;
     white-space: nowrap;
     
+    
   }
   
   .about-heading h1{
@@ -396,8 +416,8 @@
     width: 100%;
     max-width: 70%;
     position: absolute;
-    top: 45%;
-    left: 31%;
+    top: 40%;
+    left: 25%;
     white-space: normal;
     text-align: justify;
   }
@@ -437,10 +457,10 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 90%;
+    width: 85%;
     text-align: center;
     position: relative;
-    left: 5%;
+    left: 7.5%;
 
 
     
@@ -522,14 +542,33 @@
     font-family: "CustomFont", sans-serif;
     animation: myAnim 1s ease 0s 1 normal forwards; 
   }
+
+  /* CSS FOR CONTACT */
+
+  .container-contact{
+    background-color: #cacaca;
+    width: 100%;
+    height: 786px;
+  }
+
+  .contact-box{
+    background-color: #ffffff;
+    width: 20rem;
+    height: 20rem;
+  }
+
+
 /* MEDIA FOR HAMBURGER MENU */
   @media (max-width: 1330px) {
 
     .home {
-        padding-top: 60px;
+        
         grid-template-columns: repeat(1, 1fr);
         
       }
+
+
+      
 
       .nav-bar {
         width: 100%;
@@ -541,6 +580,7 @@
         padding: 0px 0px;
         
       }
+
       
   
       .menu {
@@ -577,7 +617,10 @@
       .menu li {
         margin-top: 40px;
         top: 30px;
+        
       }
+
+      
     
       .menu li a {
         padding: 10px;
@@ -615,17 +658,15 @@
       font-size: 9px;
     }
 
-    .idk{
-      width: 25%;
-      position: relative;
-      left: 7%; 
-    }
-  
+   
     .logo{
       width: 100%;
-      max-width: 80%;
-      position: relative;
-      left: 40%;
+      
+    }
+
+    .line{
+      width: 5px;
+      height: 50px;
     }
 
 
@@ -635,17 +676,24 @@
 
    
     .icon{
-      transform: translateY(1100%);
-      width: 120%;
-    
+      transform: translateY(1000%);
+      width: 145%;
+      right: 10%;
+      position: relative;
       
+    }
+
+    .home{
+      left: 15%;
+      
+     
     }
    
     .image-box img {
-      max-width: 60%;
-      left: 28%;
-      
+      left: 10%;
+      margin-bottom: 10px;
     }
+  
 
     button{
       max-width: 39%;
@@ -654,13 +702,15 @@
     .image-icon{
       left: 8%;
       height: 77%;
-      bottom: 30%;
+      bottom: 60%;
+      
     }
+
 
     .content{
       max-width: 100%;
       position: relative;
-      bottom: 35%;
+      bottom: 60%;
     }
 
     .aboutme{
@@ -668,6 +718,10 @@
       text-align: left;
       left: 0%;
       top: 35%;
+    }
+
+    .about-heading{
+      top: 0%;
     }
 
     .aboutme p{
@@ -725,21 +779,29 @@
       max-width: 100%;
     }
 
+    .line{
+      width: 5px;
+      height: 50px;
+    }
+
     body{
       width: 100%;
+    }
+
+    .home {
+      left: 15%;
+      top: 0%;
     }
     
 
     .icon{
       transform: translateY(1000%);
-      width: 100%;
+      position: relative;
+      right: 10%;
+      width: 120%;
     }
    
-    .image-box img {
-      max-width: 60%;
-      left: 20%;
-      
-    }
+   
 
     button{
       max-width: 40%;
@@ -756,12 +818,12 @@
       width: 100%;
       position: relative;
       
-      bottom: 14%;
+      bottom: 10%;
     }
     .aboutme{
       max-width: 100%;
       left: 15%;
-      top: 40%;
+      top: 35%;
     }
 
     .aboutme p{
@@ -800,15 +862,15 @@
 
   }
   /*  */
-  @media (max-width:1024px ) and (min-width:769px ){
+  @media (max-width:1024px ) and (min-width:769px ){ 
   
     html{
       font-size: 12px;
     }
 
-    .idk{
-      width: 15%;
-      left: 5%; 
+    .line{
+      width: 5.5px;
+      height: 55px;
     }
   
     .logo{
@@ -822,10 +884,11 @@
       left: 15%;
     }
 
-    .image-box img {
-      max-width: 60%;
-      left: 20%;
+    .pic{
+      left: 10%;
     }
+
+  
 
     button{
       max-width: 35%;
@@ -841,7 +904,7 @@
     .aboutme{
       max-width: 100%;
       left: 15%;
-      top: 40%;
+      top: 30%;
     }
 
   }
@@ -852,11 +915,10 @@
       font-size: 14px;
     }
 
-    .idk{
-      width: 15%;
-      left: 5%; 
+    .line{
+      width: 6px;
+      height: 60px;
     }
-  
     .logo{
       width: 100%;
       max-width: 95%;
@@ -868,10 +930,12 @@
       left: 15%;
     }
 
-    .image-box img {
-      max-width: 60%;
-      left: 20%;
+    .pic{
+      
+      left: 10%;
     }
+
+    
 
     button{
       max-width: 40%;
@@ -883,7 +947,7 @@
     .aboutme{
       max-width: 100%;
       left: 15%;
-      top: 40%;
+      top: 35%;
     }
   }
   /* MOHNITOR SIZE */
@@ -893,9 +957,9 @@
       font-size: 16px;
     }
 
-    .idk{
-      width: 15%;
-      left: 5%; 
+    .line{
+      width: 6.5px;
+      height: 65px;
     }
   
     .logo{
@@ -907,6 +971,7 @@
       width: 70%;
       position: relative;
       left: 15%;
+      margin-bottom: 20px;
     }
    
     button{
@@ -914,8 +979,7 @@
     }
 
     .pic{
-      width: 50%;
-      left: 24%;
+      left: 10%;
     }
     
     .content{
@@ -935,3 +999,4 @@
     
     
   }
+
