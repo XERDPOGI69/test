@@ -6,105 +6,71 @@
    @font-face {
     font-family: 'CustomFont';
     src: url('Exo2-VariableFont_wght.ttf') format('truetype'),;
-
+}
+@font-face {
     font-family: 'Logo';
-    src: url('Codec-Cold-Heavy-trial.ttf') format('truetype'),
-  }
+    src: url('Codec-Cold-Heavy-trial.ttf') format('truetype'),;
+}
+  
  
  /* COLOR OF WEBSITE */
-  :root {
-    --color: #9176FF;
-    --light-color: linear-gradient(
+
+  
+  .cute-mode{
+    --background-color: #d4d8f0;
+    --font-main-color: #232946;
+    --paragraph:      #232946;
+    --highlight-color: #eebbc3;
+    --button: #121629;
+  }
+
+  .mysterious-mode{
+    --background-color: #0f0e17;
+    --font-main-color: #fffffe;
+    --paragraph:      #fffffe;
+    --highlight-color: #ff8906;
+    --button: #fffffe;
+}
+  .light-mode{
+    --background-color: linear-gradient(
       45deg,
       #f1f0e8,
-      #adc4ce,
-      #f1f0e8,
-      #96b6c5);
-    --light-icon-color: #eec008;
+      #adc4ce);
     --font-main-color: #252b48;
-    --font-secondary-color: #96b6c5;
-    --image-background-shadow: black;
+    --highlight-color: rgb(34, 38, 49);
+    --button: #96b6c5;
+  }
+
+  .dark-mode {
+    --font-main-color: #e6e6e6;
+    --highlight-color:  #c5ecff;
+    --background-color: #272829;
+  
    
+      --button:#252b48;
   }
-  .darkmode {
-    --font-main-color: #96b6c5;
-    --font-secondary-color: #252b48;
-    --dark-icon-color: #fff;
-    --dark-color: linear-gradient(
-      45deg,
-      #272829,
-      #61677a,
-      #272829,
-      #61677a);
-    --dark-color-back: #2b2b2b;
-    --image-background-shadow: white;
-    
-  }
-  /* DARKMODE TOGGLE BUTTON */
-.btn{
-    background-color: #ffffff3d;
-    width: 6.5em;
-    height: 3em;
-    border-radius: 10em;
-    padding: 0 0.5em; 
-    box-shadow: inset 0 8px 60px rgba(0,0,0, .1),
-                inset 0 8px 8px rgba(0,0,0, .1),
-                inset 0 -4px 4px rgba(0,0,0, .1);
-    position: relative;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
+
+  .toggle-container {
+      display: inline-block;
+      position: relative;
+      width: 60px;
+      height: 30px;
+      background-color: #ccc;
+      border-radius: 15px;
+    }
+
+    .toggle-handle {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 26px;
+      height: 26px;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: 0.4s;
+    }
+
   
-  .btn__indicator{
-    background-color: #fff;
-    width: 2.5em;
-    height: 2.5em;
-    border-radius: 50%;
-  
-    position: absolute;
-  
-    box-shadow: 0 8px 50px rgba(0,0,0, .2);
-  
-    transition: transform .3s ease;
-  }
-  
-  .btn__icon-container{
-    width: 100%;
-    height: 100%;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .btn__icon{
-    color: var(--light-icon-color);
-    font-size: 1rem;
-  }
-  
-  /* ANIMATION */
-  .btn__icon.animated{
-    animation: spin 0.5s;
-  }
-  
-  /*  DARKMODE  */
-  
-  .darkmode .btn{
-    box-shadow: inset 0 8px 60px rgba(0,0,0, .3),
-                inset 8px 0 8px rgba(0,0,0, .3),
-                inset 0 -4px 4px rgba(0,0,0, .3);
-  }
-  
-  .darkmode .btn__indicator{
-    transform: translateX(3em);
-    background-color: var(--dark-color-back);
-    box-shadow: 0 8px 40px rgba(0,0,0, .3);
-  }
-  
-  .darkmode .btn__icon{
-    color: var(--dark-icon-color);
-  }
   /* PARENT OF FONT */
   html {
     font-size: 16px;
@@ -112,9 +78,7 @@
   }
   /* BODY */
   body {
-    --color1: #ffffff94 ;
-    --color2: #181818 ;
-    background: var(--light-color);
+    background: var(--background-color);
     background-size: 800% 800%;
     background-attachment: fixed;
     animation: gradient 30s ease infinite;
@@ -124,15 +88,7 @@
   
   }
   
-  body.darkmode{
-    --color1: #ffffff94 ;
-    --color2: #181818 ;
-    background: var(--dark-color);
-    background-size: 800% 800%;
-    background-attachment: fixed;
-    overflow: auto;
-    overflow-x: hidden;
-  }
+ 
   /* LOGO AND NAVBAR */
   
   
@@ -176,7 +132,7 @@
 .line {
     width: 7px;
     height: 70px;
-    background-color: var(--font-main-color); 
+    background-color: var(--highlight-color); 
     transform: rotate(45deg);
     position: absolute;
     border-radius: 30%;
@@ -210,7 +166,7 @@
 }
 
 span{
-  color: var(--font-main-color);
+  color: var(--highlight-color);
   -webkit-text-stroke: transparent;
 }
 
@@ -283,7 +239,7 @@ span{
     position: relative;
     width: 70%;  
     left: 12%;
-    top: 100px;
+    top: 50px;
 
     
   }
@@ -325,7 +281,7 @@ span{
    font-size: 16px;
    font-family: 'CustomFont', sans-serif;
     text-align: center;
-    color: var(--font-main-color);
+  
     
    
   }
@@ -334,12 +290,14 @@ span{
     margin-top: 90px; 
     font-family: 'CustomFont', sans-serif;
     animation: scale-up-center .4s cubic-bezier(.39, .575, .565, 1.000) both;
+    color: var(--highlight-color);
   }
   .content h1 {
     font-size: 5rem; 
     line-height: calc(5rem + 1vw);
     font-family: "CustomFont", sans-serif;
-    animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both
+    animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both;
+    color: var(--highlight-color);
   }
   
   .content p {
@@ -347,10 +305,11 @@ span{
     margin: 10px 10% 0px;
     font-weight: bolder;
     font-family: "CustomFont", sans-serif;
-    animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both
+    animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both;
+    color: var(--font-main-color);
   }
   
-  button {
+  .btn-index{
     width: 200px;
     max-width: 100%;
     padding: 15px 0;
@@ -360,7 +319,7 @@ span{
     border: 3px solid var(--font-main-color);
     border-radius: 25px;
     background: transparent;
-    color: var(--font-main-color);
+    color: var(--highlight-color);
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -374,7 +333,7 @@ span{
   }
   
   .spans{
-    background: var(--font-main-color);
+    background: var(--highlight-color);
     height: 100%;
     width: 0;
     position: absolute;
@@ -382,15 +341,16 @@ span{
     bottom: 0;
     z-index: -1;
     transition: 0.3s;
+    
   }
   
-  button:hover span {
+  .btn-index:hover span {
     width: 100%;
   }
   
-  button:hover {
-    border: none;
-    color: var(--font-secondary-color);
+  .btn-index:hover {
+    border: 3px solid var(--font-main-color);
+    color: var(--button);
   }
 
   /* About me Content */
@@ -398,7 +358,8 @@ span{
     width: 100%;
     position: relative;
     text-align: center;
-    top: 60px;
+    bottom: 100px;
+    right: 15%;
     color: var(--font-main-color);
     overflow: hidden;
     white-space: nowrap;
@@ -423,6 +384,7 @@ span{
   }
   
   .aboutme li{
+    color: var(--highlight-color);
   list-style-type: circle;  
   font-size: 2rem;
   font-weight: bold;
@@ -453,7 +415,7 @@ span{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -485,6 +447,7 @@ span{
   .item img{
     width: 550px;
     height: 300px;
+    background-attachment: fixed;
   }
   .item:hover img {
     transform: scale(1.1);
@@ -546,16 +509,298 @@ span{
   /* CSS FOR CONTACT */
 
   .container-contact{
-    background-color: #cacaca;
+    position: relative;
     width: 100%;
+    max-width: 100%;
     height: 786px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    gap: 40px;
+    justify-content: center;
+    
   }
 
   .contact-box{
-    background-color: #ffffff;
-    width: 20rem;
-    height: 20rem;
+    background-color: #eeeeee57;
+    width: 22rem;
+    height: 22rem;
+    position: relative;
+    
+    top: 20%;
+    border-radius: 10%;
+    box-shadow: 10px 10px 5px #0000008f;
+    
   }
+
+  
+  .contact-box h1{ 
+    font-family: "CustomFont", sans-serif;
+    text-align: center;
+    position: relative;
+    top: 10%;
+    font-size: 3.5rem;
+    color: var(--highlight-color);
+    
+  }
+
+  .contact-box p{
+    font-family: "CustomFont", sans-serif;
+    text-align: center;
+    position: relative;
+    top: 10%;
+    font-size: 1.5rem;
+    color: var(--font-main-color);
+    
+  }
+
+  .icon-contact{
+    width: 25%;
+    position: relative;
+    
+    left: 40%;
+    bottom: 25%;
+  }
+  .fa-brands,.fa-solid{
+    position: relative;
+    left: 5px;
+    color: var(--highlight-color);
+    
+  }
+  /* contact form*/
+  .contact-form {
+    background-color: #252b48d7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 700px;
+    height: auto;
+    border-radius: 5%;
+
+    
+    
+
+  }
+  
+  .contact-form form {
+    position: relative;
+    width: 550px;
+    max-width: 70%;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 20px;
+    outline: none;
+    border: none;
+    background: var(--font-secondary-color);
+    color: var(--font-main-color);
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+  }
+  
+  form input::placeholder, 
+  form textarea::placeholder {
+    color: var(--2nd-main-color);
+  }
+  
+  textarea {
+    height: 200px;
+    resize: none;
+  }
+  
+  form .send-btn {
+    background: var(--font-secondary-color);
+    color: var(--font-main-color);
+    box-shadow: 4px 4px var(--font-main-color);
+    display: inline-block;
+    padding: 0 25px;
+    line-height: 42px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    transition: ease all 0.35s;
+    margin-top: 5px;
+  }
+  
+  form .send-btn:hover {
+    background: var(--font-secondary-color);
+    color: var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+  }
+
+  .contact-heading {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    text-align: center;
+    color: var(--font-main-color);
+    margin-bottom: 30px;
+  }
+  .contact-heading h1{ font-size: 6.5rem; font-family: "CustomFont", sans-serif; }
+
+  .container-form{
+    width: 100%;
+    height: 62vh;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content:center;
+    
+    
+  }
+
+  
+
+  .contact-info{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: auto;
+    position: relative;
+    padding-top: 80px;
+  }
+
+  .contact-info p{
+    font-size: 1.5rem;
+    font-family: "CustomFont", sans-serif;
+    color: var(--font-main-color);
+    padding: 10px;
+  }
+
+  .contact-info h1{
+    font-size: 2.5rem;
+    font-family: "CustomFont", sans-serif;
+    color: var(--font-main-color);
+    margin-left: 30px;
+  }
+
+  .direction{
+    flex-direction: row;
+    display: flex;
+    position: relative;
+    left: 10%;
+  }
+  
+  .btn-contact{
+    position: relative;
+    top: 10%;
+    left: 18%;
+    width: 200px;
+    max-width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    font-weight: bold;
+    border: 3px solid var(--font-main-color);
+    border-radius: 25px;
+    background: transparent;
+    color: var(--font-main-color);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-family: "CustomFont", sans-serif;
+    font-size: 1.3rem;
+    animation:scale-up-hor-center .4s cubic-bezier(.39,.575,.565,1.000) both
+  }
+
+  .btn-contact-back{
+    position: relative;
+    width: 100px;
+    max-width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    font-weight: bold;
+    border: 3px solid var(--font-main-color);
+    border-radius: 25px;
+    background: var(--font-secondary-color);
+    color: var(--font-main-color);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-family: "CustomFont", sans-serif;
+    font-size: 1rem;
+    animation:scale-up-hor-center .4s cubic-bezier(.39,.575,.565,1.000) both
+  }
+
+  /* THEME */
+  .theme{
+    width: 200px;
+    height: 80px;
+    background-color: #f1f0e8;
+    display: flex;
+    padding: 20px 0;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    font-size: 20px;
+    
+  }
+  
+  .theme-select{
+    background-color: #f1f0e881;
+    border: 2px solid var(--button);
+    border-radius: 5%;
+    position: relative;
+    left: 10%;
+    top: 100px;
+    max-width: 40%;
+    width: 1000px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .para{
+    color: var(--font-button-color);
+  }
+  
+  .colors{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid #181818;
+    position: relative;
+    left: 23%;
+  }
+
+  .theme-content{
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+  }
+
+  .btn-save{
+   
+    position: relative;
+    width: 200px;
+    max-width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    font-weight: bold;
+    border: 3px solid var(--highlight-color);
+    border-radius: 25px;
+    background: var(--highlight-color);
+    color: var(--font-main-color);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-family: "CustomFont", sans-serif;
+    font-size: 1rem;
+    animation:scale-up-hor-center .4s cubic-bezier(.39,.575,.565,1.000) both
+  }
+  
+ 
 
 
 /* MEDIA FOR HAMBURGER MENU */
@@ -592,7 +837,7 @@ span{
         top: 0;
         right: -100%;
         z-index: 100;
-        background-color: var(--font-secondary-color);
+        background-color: var(--background-color);
         transition: all 0.2s ease-in-out;
         height: 100vh; 
         overflow-y: auto; 
@@ -630,7 +875,7 @@ span{
     
       .open-menu, .close-menu {
         display: block;
-        color: var(--font-main-color);
+        color: var(--highlight-color);
         position: absolute;
         top: 20px;
         right: 40px;
@@ -655,7 +900,7 @@ span{
   @media (max-width:480px) {
 
     html{
-      font-size: 9px;
+      font-size: 10px;
     }
 
    
@@ -677,14 +922,15 @@ span{
    
     .icon{
       transform: translateY(1000%);
-      width: 145%;
-      right: 10%;
+      width: 150%;
+      right: 20%;
       position: relative;
       
     }
 
     .home{
       left: 15%;
+      top: 100px;
       
      
     }
@@ -695,7 +941,7 @@ span{
     }
   
 
-    button{
+    .btn-index{
       max-width: 39%;
     }
 
@@ -710,7 +956,7 @@ span{
     .content{
       max-width: 100%;
       position: relative;
-      bottom: 60%;
+      bottom: 55%;
     }
 
     .aboutme{
@@ -721,7 +967,8 @@ span{
     }
 
     .about-heading{
-      top: 0%;
+      right: 0%;
+      
     }
 
     .aboutme p{
@@ -740,8 +987,8 @@ span{
     }
 
     .item img{
-      width: 300px;
-      height: 160px;
+      width: 400px;
+      height: 180px;
     }
 
     .grid{
@@ -759,6 +1006,21 @@ span{
       text-align: center;
       color: var(--font-main-color);
       
+    }
+
+    .contact-form {
+      position: relative;
+      width: 480px;
+      min-width: 0px;
+      bottom: 5%;
+    }
+
+    .container-form{
+      height: 150vh;
+    }
+
+    .direction{
+      left: 0%;
     }
 
     
@@ -803,7 +1065,7 @@ span{
    
    
 
-    button{
+    .btn-index{
       max-width: 40%;
       font-size: 1rem;
     }
@@ -856,6 +1118,25 @@ span{
       
     }
 
+  
+
+    .contact-form{
+      height: 500px;
+      
+    
+    }
+
+    .contact-form {
+      position: relative;
+      width: 768px;
+      min-width: 481px;
+    }
+
+    .direction{
+      left: 0%;
+      padding-left: 50px;
+    }
+
     
 
     
@@ -866,6 +1147,10 @@ span{
   
     html{
       font-size: 12px;
+    }
+    
+    .home{
+      left: 16%;
     }
 
     .line{
@@ -885,7 +1170,7 @@ span{
     }
 
     .pic{
-      left: 10%;
+      left: 0%;
     }
 
   
@@ -905,6 +1190,26 @@ span{
       max-width: 100%;
       left: 15%;
       top: 30%;
+    }
+
+    .container-contact{
+      max-width: 80%;
+      gap: 40px;
+      
+    }
+
+    .container-form{   
+      width: 100%;
+
+    }
+
+    .container-form{
+      height: 100vh;
+    }
+
+    .contact-info{
+      
+      width: 700px;
     }
 
   }
@@ -949,12 +1254,28 @@ span{
       left: 15%;
       top: 35%;
     }
+
+    .container-contact{
+      max-width: 70%;
+      gap: 40px;
+      height: 100vh;
+      left: 8%;
+    }
+
+    .container-form{
+      height: 100vh;
+    }
+
+    .contact-info{
+      
+      width: 700px;
+    }
   }
   /* MOHNITOR SIZE */
   @media (max-width:1330px ) and (min-width:1201px ){
      
     html{
-      font-size: 16px;
+      font-size: 13px;
     }
 
     .line{
@@ -979,16 +1300,18 @@ span{
     }
 
     .pic{
-      left: 10%;
+      left: 0%;
     }
     
     .content{
       position: relative;
-      bottom: 45%;
+      bottom: 30%;
     }
     
     .home{
       grid-gap: 100px;
+      left: 16%;
+      
     }
 
     .aboutme{
@@ -996,7 +1319,22 @@ span{
       
     }
 
-    
+    .about-heading{
+      top: 10%;
+    }
+
+    .contact-form form {
+     
+      max-width: 60%;
+      
     
   }
 
+  .contact-info{
+      
+    width: 700px;
+  }
+  
+  
+
+  }
