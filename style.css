@@ -23,27 +23,29 @@
   :root{
     --logo:#000000;
     --highlight: #000000;
-    --background: #ffffff;
+    --background: linear-gradient(153deg, rgba(202, 202, 202, 1) 9%, rgba(255, 255, 255, 1) 21%, rgba(255, 255, 255, 1) 79%, rgba(202, 202, 202, 1) 88%);
     --headings:  #000000;
     --button-text: #000000;
-    --button-text-hover:#ffffff;
+    --button-text-hover:#000000;
     --paragraph: #000000;
     --button: #000000;
     --stroke: #000000;
     --stroke-hover: #000000;
+    --boxshadow: #000000;
   }
   .cute-mode{
     --logo:#0e172c;
     --highlight: #0e172c;
     --background: #fec7d7;
     --headings:  #200e2c;
-    --button-text: #0e172c;
-    --button-text-hover:#0e172c;
+    --button-text: #3f265a;
+    --button-text-hover:#3f265a;
     --paragraph: #3f265a;
-    --button: #0e172c;
+    --button: #3f265a;
     --button-hover: #a786df;
-    --stroke: #0e172c;
+    --stroke: #3f265a;
     --stroke-hover: #a786df;
+    --boxshadow: #170622;
   }
 
   .mysterious-mode{
@@ -52,25 +54,27 @@
     --background: #141414;
     --headings: #ff8906;
     --button-text: #f3f3f3;
-    --button-text-hover:#ff8906;
+    --button-text-hover:#f3f3f3;
     --paragraph: #f3f3f3;
     --button: #ff8906;
-    --button-hover: #ffffff;
-    --stroke: #ffffff;
-    --stroke-hover: #ffffff;
+    --button-hover: #ff8906;
+    --stroke: #ff8906;
+    --stroke-hover: #ff8906;
+    --boxshadow: #ff8906;
 }
   .light-mode{
     --logo: #272343;
     --highlight: #272343;
     --background: #fffffe;
     --headings: #272343;
-    --button-text: #2d334a;
+    --button-text: #272343;
     --button-text-hover:#ffffff;
     --paragraph: #2d334a;
     --button: #ffffff;
     --button-hover: #2d334a;
     --stroke: #272343;
     --stroke-hover: #ffffff;
+    --boxshadow: #272343;
   }
 
   .dark-mode {
@@ -79,12 +83,13 @@
     --background: #16161a;
     --headings:  #94a1b2;
     --button-text: #fffffe;
-    --button-text-hover:#ffffff;
+    --button-text-hover:#2d334a;
     --paragraph: #fffffe;
     --button: #fffffe;
-    --button-hover: #2d334a;
+    --button-hover: #fffffe;
     --stroke: #fffffe;
-    --stroke-hover: #2d334a;
+    --stroke-hover: #fffffe;
+    --boxshadow: #94a1b2;
   }
 
   .toggle-container {
@@ -287,7 +292,7 @@ span{
     height: auto;
     border-radius: 50%;
     border: 3px solid rgba(0, 0, 0, 0.322);
-    box-shadow: 10px 5px 10px rgba(0, 0, 0, .6);
+    box-shadow: 0px 0px 30px 9px var(--boxshadow);
     position: relative;
     
   }
@@ -450,13 +455,14 @@ span{
   
   
   .grid {
+    background-color: #f1f0e8;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: auto;
     width: 85%;
     text-align: center;
     position: relative;
@@ -475,18 +481,19 @@ span{
     max-height: 100%;
     height: 300px;
     cursor: pointer;
-    top: 6rem;
+     
     border-radius: 50px;
-    border: 4px solid #18181800;
     box-shadow: 10px 10px 50px black;
-    animation:scale-up-hor-center .6s cubic-bezier(.39,.575,.565,1.000) both
+    animation:scale-up-hor-center .6s cubic-bezier(.39,.575,.565,1.000) both;
+    background-repeat:no-repeat, center, cover; 
   }
+
+  .item:hover {
   
-  .item img{
-    width: 550px;
-    height: 300px;
-    background-attachment: fixed;
+    box-shadow: 0px 0px 20px 10px var(--boxshadow);
+    transition: box-shadow 0.5s linear;
   }
+
   .item:hover img {
     transform: scale(1.1);
     transition: transform 0.3s ease;
@@ -561,16 +568,24 @@ span{
   }
 
   .contact-box{
-    background-color: #eeeeee56;
+    background-color: #eeeeee18;
     width: 20rem;
     height: 20rem;
+    overflow-x: auto;
+    overflow: hidden;
     position: relative;
     border: 2px solid #79797980;
     top: 20%;
     border-radius: 10%;
     box-shadow: 10px 10px 5px #0000008f;
-    
   }
+
+  .contact-box:hover{
+    box-shadow: 0px 0px 20px 10px var(--boxshadow);
+    transition: box-shadow 0.5s linear;
+  }
+
+ 
 
   
   .contact-box h1{ 
@@ -722,8 +737,8 @@ span{
   }
   
   .theme-select{
-    background-color: #f1f0e881;
-    border: 2px solid var(--button);
+    background-color: #f1f0e800;
+    border: 2px solid var(--stroke);
     border-radius: 5%;
     position: relative;
     max-width: 40%;
@@ -762,24 +777,47 @@ span{
   }
 
   .btn-save{
-   
-    position: relative;
     width: 200px;
     max-width: 100%;
     padding: 15px 0;
     text-align: center;
     margin: 20px 10px;
     font-weight: bold;
-    border: 3px solid var(--stroke-hover);
+    border: 3px solid var(--stroke);
     border-radius: 25px;
-    background: var(--button-hover);
-    color: var(--button);
+    background: transparent;
+    color: var(--button-text);
     cursor: pointer;
     position: relative;
     overflow: hidden;
     font-family: "CustomFont", sans-serif;
-    font-size: 1rem;
+    font-size: 1.3rem;
     animation:scale-up-hor-center .4s cubic-bezier(.39,.575,.565,1.000) both
+  }
+
+  #saveButton{
+    text-decoration: none;
+  }
+  
+  .spans{
+    background: var(--button-hover);
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.3s;
+    
+  }
+  
+  .btn-save:hover span {
+    width: 100%;
+  }
+  
+  .btn-save:hover {
+    border: 3px solid var(--stroke-hover);
+    color: var(--button-text-hover);
   }
   
  
@@ -964,16 +1002,11 @@ span{
       }
 
     .item{
-      height: 160px;
-      top: 70px;
+      
+      background-repeat:no-repeat, center, cover; 
     }
 
-    .item img{
-      position: relative;
-      right: 5%;
-      width: 350px;
-      height: 160px;
-    }
+    
 
     .grid{
       width: 90%;
@@ -1089,15 +1122,14 @@ span{
     }
 
     .item{
-      height: 200px;
-      width: 400px;
-      top: 70px;
+     width: 225px;
+     height: 150px;
     }
 
     .grid{
-      width: 90%;
+      width: 100%;
       left: 5%;
-      top: 100%;
+     
 
     }
     .item img{
