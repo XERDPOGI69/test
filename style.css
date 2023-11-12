@@ -582,7 +582,7 @@ span{
 
   .contact-box:hover{
     box-shadow: 0px 0px 20px 10px var(--boxshadow);
-    transition: box-shadow 0.5s linear;
+    transition: box-shadow 1s linear;
   }
 
  
